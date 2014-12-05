@@ -3,19 +3,20 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
-    <title>Important Todo List</title>
+    <title>Beck's Important To Do List</title>
     <link rel="stylesheet" href="dist/styles/normalize.css" />
     <link rel="stylesheet" href="styles/todo-app.css" type="text/css" media="screen" charset="utf-8">
   </head>
   <div class="container" ng-controller="TodoController as tdc">
-    <h1>{{tdc.name}}'s Todo List</h1>
-    <form>  
-    <span>Category: </span><input type="text" ng-model="tdc.newTask.category" />
-    <span>Task: </span><input type="text" ng-model="tdc.newTask.name" />
+    <h1>{{tdc.name}}'s Awesome To Do List</h1>
+    <form name="myForm" ng-submit="myForm.$valid && tdc.addNewTask()" novalidate>  
+    <span>Category: </span><input type="text" ng-model="tdc.newTask.category" required/>
+    <span>Task: </span><input type="text" ng-model="tdc.newTask.name" required/>
     <span>Description: </span><input type="text" ng-model="tdc.newTask.desc" />
     <span>Priority: </span><input type="text" ng-model="tdc.newTask.priority" />
-    Due: <input type="date" ng-model="tdc.newTask.due" />
-    <button ng-click='tdc.addNewTask()'>Add Task</button>
+    Due: <input type="date" ng-model="tdc.newTask.due" required/>
+    <input type="submit" value="Add Task" />
+
     </form>
     <table>
       <tr>
@@ -34,8 +35,8 @@
           <td>{{task.name}}</td>
           <td>{{task.desc}}</td>
           <td>{{task.priority}}</td>
-          <td>{{task.due}}</td>
-          <td><button ng-click="tdc.removeTask(task)">Remove Task</button></td>
+          <td>{{task.due | date}}</td>
+          <td><button ng-click="tdc.removeTask(thing)">Remove Task</button></td>
         </tr>
       </tbody>
     </table>
