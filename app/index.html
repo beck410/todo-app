@@ -10,24 +10,30 @@
   <div class="container" ng-controller="TodoController as tdc">
     <h1>{{tdc.name}}'s Todo List</h1>
     <form>  
+    <span>Category: </span><input type="text" ng-model="tdc.newTask.category" />
     <span>Task: </span><input type="text" ng-model="tdc.newTask.name" />
     <span>Description: </span><input type="text" ng-model="tdc.newTask.desc" />
+    <span>Priority: </span><input type="text" ng-model="tdc.newTask.priority" />
     Due: <input type="date" ng-model="tdc.newTask.due" />
     <button ng-click='tdc.addNewTask()'>Add Task</button>
     </form>
     <table>
       <tr>
         <thead>
+          <th>Category</th>
           <th>Task</th>
           <th>Description</th>
+          <th>Priority</th>
           <th>Due</th>
           <th>Remove<th>
         </thead>
       </tr>
       <tbody>
         <tr ng-repeat="task in tdc.tasks">
+          <td>{{task.category}}</td>
           <td>{{task.name}}</td>
           <td>{{task.desc}}</td>
+          <td>{{task.priority}}</td>
           <td>{{task.due}}</td>
           <td><button ng-click="tdc.removeTask(task)">Remove Task</button></td>
         </tr>
