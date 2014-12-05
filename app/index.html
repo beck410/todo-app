@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="styles/todo-app.css" type="text/css" media="screen" charset="utf-8">
   </head>
   <div class="container" ng-controller="TodoController as tdc">
-    <h1>{{name}}'s Todo List</h1>
-    Your Name: <input type="text" ng-model="name" />
+    <h1>{{tdc.name}}'s Todo List</h1>
     <form>  
-    Task: <input type="text" ng-model="tdc.newTask.name" />
-    Description: <input type="text" ng-model="tdc.newTask.desc" />
+    <span>Task: </span><input type="text" ng-model="tdc.newTask.name" />
+    <span>Description: </span><input type="text" ng-model="tdc.newTask.desc" />
     Due: <input type="date" ng-model="tdc.newTask.due" />
     <button ng-click='tdc.addNewTask()'>Add Task</button>
     </form>
@@ -22,6 +21,7 @@
           <th>Task</th>
           <th>Description</th>
           <th>Due</th>
+          <th>Remove<th>
         </thead>
       </tr>
       <tbody>

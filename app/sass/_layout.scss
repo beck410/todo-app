@@ -1,0 +1,58 @@
+.container {
+  max-width: 1280px;
+  margin: 20px auto;
+  background: whitesmoke;
+  padding: 10px 20px;
+  font-family: Helvetica;
+  color: #2c3e50; 
+  border-radius: 10px;
+  
+  h1 {
+    text-align: center;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  form {
+    padding: 10px;
+    background: #3498db;
+    border-radius: 10px;
+  }
+
+  button {
+    background: #7f8c8d;
+    color: white;
+    border-radius: 5px; 
+    padding: 3px;
+  }
+
+  input {
+    margin: 10px;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #2ecc71;
+    border-radius: 10px;
+    padding: 20px;
+
+    td {
+      padding: 10px 20px;
+    }
+
+    th{
+      background: #27ae60;
+      padding: 10px 20px;
+      text-align: left;
+    }
+  }
+}
+
+
+
+

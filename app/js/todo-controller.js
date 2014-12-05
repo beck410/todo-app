@@ -5,6 +5,7 @@
   .controller('TodoController',function(){
 
     var vm = this;
+    vm.name = 'Beck';
     vm.tasks = [
       {
         name: 'Learn Angular',
