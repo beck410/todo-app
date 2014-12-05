@@ -1,0 +1,19 @@
+{
+  "name": "todo-app",
+  "version": "0.0.01",
+  "homepage": "https://github.com/beck410/todo-app",
+  "authors": [
+    "beck410 <beck410@hotmail.com>"
+  ],
+  "description": "Angular example of todo list app",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
