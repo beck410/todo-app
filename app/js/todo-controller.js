@@ -32,12 +32,21 @@
 
   vm.addNewTask = function(){
     vm.tasks.push(vm.newTask);
-    vm.newTask = null;
+    vm.newTask = _freshTask();
   };
 
   vm.removeTask = function(item){
     var index = vm.tasks.indexOf(item);
-    vm.tasks.splice(index,1);
+    vm.tasks
+    .splice(index,1);
+  };
+
+  vm.newTask = _freshTask();
+
+  function _freshTask(){
+    return {
+      priority: 'medium'
+    };
   }
   });
 })();
